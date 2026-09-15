@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Mandiri Minggu 2 - PPAW</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER DENGAN LOGO DAN NAVIGASI -->
+  <header>
+    <div class="logo">
+      <h1>Portofolio Saya</h1>
+      <p>S1 Sistem Informasi - IT Del</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#portofolio">Matakuliah</a></li>
+        <li><a href="#layanan">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- KONTEN UTAMA & ASIDE SIDEBAR -->
+  <div class="layout">
+    
+    <main>
+      
+      <!-- SECTION 1: TENTANG SAYA -->
+      <section id="tentang">
+        <h2>Tentang Saya</h2>
+        <article class="kotak">
+          <h3>Bastian Tambunan</h3>
+          <p>NIM: 12S22045</p>
+          <p>Saya mahasiswa S1 Sistem Informasi di Institut Teknologi Del. Ini adalah web tugas praktikum Minggu 2 mata kuliah Pemrograman dan Pengujian Aplikasi Web (PPAW).</p>
+        </article>
+      </section>
+
+      <!-- SECTION 2: KEAHLIAN & DAFTAR (LISTS) -->
+      <section id="keahlian">
+        <h2>Keahlian &amp; Hobi</h2>
+        <div class="kotak">
+          <h3>Hobi Saya (Unordered List)</h3>
+          <ul>
+            <li>Belajar HTML &amp; CSS dasar</li>
+            <li>Bermain musik</li>
+            <li>Membaca artikel teknologi</li>
+          </ul>
+
+          <h3>Langkah Belajar Web (Ordered List)</h3>
+          <ol>
+            <li>Memahami tag HTML5 semantik</li>
+            <li>Membuat file style.css</li>
+            <li>Mencoba Flexbox dan Grid</li>
+            <li>Membuat form kontak</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SECTION 3: TABEL RIWAYAT MATAKULIAH -->
+      <section id="portofolio">
+        <h2>Riwayat Mata Kuliah</h2>
+        <div class="tabel-wrapper">
+          <table>
+            <caption>Tabel 1: Daftar Matakuliah Praktikum S1 Sistem Informasi</caption>
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Kode MK</th>
+                <th scope="col">Nama Mata Kuliah</th>
+                <th scope="col">SKS</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>IFS2102</td>
+                <td>Pemrograman &amp; Pengujian Aplikasi Web</td>
+                <td>4</td>
+                <td>Sedang Diambil</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>IFS2101</td>
+                <td>Manajemen Basis Data</td>
+                <td>3</td>
+                <td>Lulus</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>IFS2002</td>
+                <td>Algoritma dan Pemrograman</td>
+                <td>4</td>
+                <td>Lulus</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="3">Total SKS</th>
+                <td colspan="2">11 SKS</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 4: FORMULIR KONTAK / KONSULTASI -->
+      <section id="layanan">
+        <h2>Formulir Kontak</h2>
+
+        <form action="#" method="post">
+          
+          <!-- FIELDSET 1 -->
+          <fieldset>
+            <legend>Data Pengirim</legend>
+
+            <div class="field">
+              <label for="nama">Nama Lengkap:</label>
+              <input type="text" id="nama" name="nama" required placeholder="Isi nama kamu">
+            </div>
+
+            <div class="field">
+              <label for="email">Email Kampus:</label>
+              <input type="email" id="email" name="email" required placeholder="nama@del.ac.id">
+            </div>
+
+            <div class="field">
+              <label for="hp">No HP/WA:</label>
+              <input type="tel" id="hp" name="hp" required placeholder="081234567890">
+            </div>
+          </fieldset>
+
+          <!-- FIELDSET 2 -->
+          <fieldset>
+            <legend>Detail Pesan</legend>
+
+            <div class="field">
+              <label for="topik">Pilihan Topik:</label>
+              <select id="topik" name="topik" required>
+                <option value="">-- Pilih Topik --</option>
+                <option value="html">Tanya HTML5</option>
+                <option value="css">Tanya CSS3</option>
+                <option value="tugas">Diskusi Tugas</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="durasi">Jumlah Jam Diskusi:</label>
+              <input type="number" id="durasi" name="durasi" min="1" max="5" value="1" required>
+            </div>
+
+            <div class="field">
+              <label>Tempat Diskusi:</label>
+              <div>
+                <label for="online"><input type="radio" id="online" name="tempat" value="online" checked required> Online</label>
+                <label for="kampus"><input type="radio" id="kampus" name="tempat" value="kampus" required> Di Kampus</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Bantuan yang Dibutuhkan:</label>
+              <div>
+                <label for="bantu_html"><input type="checkbox" id="bantu_html" name="bantu[]" value="html"> Cek HTML</label>
+                <label for="bantu_css"><input type="checkbox" id="bantu_css" name="bantu[]" value="css"> Cek CSS</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="pesan">Isi Pesan:</label>
+              <textarea id="pesan" name="pesan" rows="4" required placeholder="Tuliskan pertanyaan kamu di sini..."></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit">Kirim Pesan</button>
+          <button type="reset">Reset</button>
+
+        </form>
+      </section>
+
+    </main>
+
+    <!-- ASIDE / SIDEBAR -->
+    <aside>
+      <div class="kotak">
+        <h3>Info Kampus</h3>
+        <p>Institut Teknologi Del</p>
+        <p>Sitoluama, Laguboti, Toba</p>
+      </div>
+
+      <div class="kotak">
+        <h3>Catatan Praktikum</h3>
+        <p>Minggu 02: HTML5 &amp; CSS3</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Bastian Tambunan - IT Del</p>
+  </footer>
+
+</body>
+</html>
