@@ -1,7 +1,7 @@
 # Tugas Mandiri Minggu 02 - PPAW
 
-Nama: Bastian Tambunan  
-NIM: 12S22045  
+Nama: Josua Sianturi
+NIM: 12S22035
 Prodi: S1 Sistem Informasi IT Del  
 
 ## Deskripsi Singkat
