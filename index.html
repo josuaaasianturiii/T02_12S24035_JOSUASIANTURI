@@ -3,206 +3,437 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tugas Mandiri Minggu 2 - PPAW</title>
+  <title>Tugas Mandiri Minggu 3 - PPAW (Bootstrap 5)</title>
+  <!-- Bootstrap 5.3.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS Overrides -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER DENGAN LOGO DAN NAVIGASI -->
+  <!-- HEADER & RESPONSIVE NAVBAR -->
   <header>
-    <div class="logo">
-      <h1>Portofolio Saya</h1>
-      <p>S1 Sistem Informasi - IT Del</p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#keahlian">Keahlian</a></li>
-        <li><a href="#portofolio">Matakuliah</a></li>
-        <li><a href="#layanan">Kontak</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm py-3" style="background-color: var(--primary-brand);">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-code-square fs-4"></i>
+          <span>Portofolio<span class="text-warning">.Del</span></span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#layanan">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
+  <section id="hero" class="py-5 text-white shadow-sm" style="background: linear-gradient(135deg, var(--primary-brand), var(--primary-hover));">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto text-center">
+          <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-semibold rounded-pill">S1 Sistem Informasi - IT Del</span>
+          <h1 class="display-4 fw-bold mb-3">Transformasi Digital & Web Portofolio</h1>
+          <p class="lead mb-4">Selamat datang di portal profesional saya yang direfaktor menggunakan ekosistem Bootstrap 5.3 dan Advanced Custom CSS.</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#portofolio" class="btn btn-warning text-dark fw-bold px-4 py-2 shadow-sm">Lihat Proyek</a>
+            <a href="#layanan" class="btn btn-outline-light fw-bold px-4 py-2">Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- KONTEN UTAMA & ASIDE SIDEBAR -->
-  <div class="layout">
-    
-    <main>
+  <div class="container my-5">
+    <div class="row g-4">
       
-      <!-- SECTION 1: TENTANG SAYA -->
-      <section id="tentang">
-        <h2>Tentang Saya</h2>
-        <article class="kotak">
-          <h3>Josua Sianturi</h3>
-          <p>NIM: 12S22035</p>
-          <p>Saya mahasiswa S1 Sistem Informasi di Institut Teknologi Del. Ini adalah web tugas praktikum Minggu 2 mata kuliah Pemrograman dan Pengujian Aplikasi Web (PPAW).</p>
-        </article>
-      </section>
+      <main class="col-lg-8">
+        
+        <!-- SECTION 1: TENTANG SAYA -->
+        <section id="tentang" class="mb-5">
+          <h2 class="h3 text-primary border-bottom pb-2 mb-3">Tentang Saya</h2>
+          <div class="card shadow-sm border-0 project-card p-4">
+            <div class="card-body">
+              <h3 class="card-title h4 text-dark fw-bold">Bastian Tambunan</h3>
+              <p class="text-muted fw-semibold">NIM: 12S22045</p>
+              <p class="card-text">Saya mahasiswa S1 Sistem Informasi di Institut Teknologi Del. Ini adalah web tugas praktikum Pemrograman dan Pengujian Aplikasi Web (PPAW) Minggu 3 yang telah dimodernisasi menggunakan Bootstrap 5 dan CSS Custom Properties.</p>
+            </div>
+          </div>
+        </section>
 
-      <!-- SECTION 2: KEAHLIAN & DAFTAR (LISTS) -->
-      <section id="keahlian">
-        <h2>Keahlian &amp; Hobi</h2>
-        <div class="kotak">
-          <h3>Hobi Saya (Unordered List)</h3>
-          <ul>
-            <li>Belajar HTML &amp; CSS dasar</li>
-            <li>Bermain musik</li>
-            <li>Membaca artikel teknologi</li>
-          </ul>
+        <!-- SECTION 2: KEAHLIAN & DAFTAR -->
+        <section id="keahlian" class="mb-5">
+          <h2 class="h3 text-primary border-bottom pb-2 mb-3">Keahlian &amp; Hobi</h2>
+          <div class="card shadow-sm border-0 project-card p-4">
+            <div class="card-body">
+              <h4 class="h5 fw-bold mb-3 text-secondary"><i class="bi bi-heart-fill text-danger me-2"></i>Hobi Saya</h4>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-success me-2"></i>Belajar HTML5 &amp; CSS3 Modern</li>
+                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-success me-2"></i>Bermain musik dan eksplorasi seni</li>
+                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-success me-2"></i>Membaca artikel teknologi &amp; sistem informasi</li>
+              </ul>
 
-          <h3>Langkah Belajar Web (Ordered List)</h3>
-          <ol>
-            <li>Memahami tag HTML5 semantik</li>
-            <li>Membuat file style.css</li>
-            <li>Mencoba Flexbox dan Grid</li>
-            <li>Membuat form kontak</li>
-          </ol>
-        </div>
-      </section>
+              <h4 class="h5 fw-bold mb-3 text-secondary"><i class="bi bi-list-ol text-primary me-2"></i>Langkah Belajar Web</h4>
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item bg-transparent border-0">Memahami tag HTML5 semantik dan aksesibilitas</li>
+                <li class="list-group-item bg-transparent border-0">Membuat dan mengorganisasi file style.css</li>
+                <li class="list-group-item bg-transparent border-0">Menerapkan sistem Grid dan Flexbox responsif</li>
+                <li class="list-group-item bg-transparent border-0">Mengintegrasikan Bootstrap 5 Framework & Custom Overrides</li>
+              </ol>
+            </div>
+          </div>
+        </section>
 
-      <!-- SECTION 3: TABEL RIWAYAT MATAKULIAH -->
-      <section id="portofolio">
-        <h2>Riwayat Mata Kuliah</h2>
-        <div class="tabel-wrapper">
-          <table>
-            <caption>Tabel 1: Daftar Matakuliah Praktikum S1 Sistem Informasi</caption>
-            <thead>
-              <tr>
-                <th scope="col">No</th>
-                <th scope="col">Kode MK</th>
-                <th scope="col">Nama Mata Kuliah</th>
-                <th scope="col">SKS</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>IFS2102</td>
-                <td>Pemrograman &amp; Pengujian Aplikasi Web</td>
-                <td>4</td>
-                <td>Sedang Diambil</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>IFS2101</td>
-                <td>Manajemen Basis Data</td>
-                <td>3</td>
-                <td>Lulus</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>IFS2002</td>
-                <td>Algoritma dan Pemrograman</td>
-                <td>4</td>
-                <td>Lulus</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="row" colspan="3">Total SKS</th>
-                <td colspan="2">11 SKS</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
-
-      <!-- SECTION 4: FORMULIR KONTAK / KONSULTASI -->
-      <section id="layanan">
-        <h2>Formulir Kontak</h2>
-
-        <form action="#" method="post">
+        <!-- SECTION 3: GRID PORTOFOLIO & MODAL DIALOG -->
+        <section id="portofolio" class="mb-5">
+          <h2 class="h3 text-primary border-bottom pb-2 mb-3">Portofolio Proyek &amp; Matakuliah</h2>
           
-          <!-- FIELDSET 1 -->
-          <fieldset>
-            <legend>Data Pengirim</legend>
-
-            <div class="field">
-              <label for="nama">Nama Lengkap:</label>
-              <input type="text" id="nama" name="nama" required placeholder="Isi nama kamu">
-            </div>
-
-            <div class="field">
-              <label for="email">Email Kampus:</label>
-              <input type="email" id="email" name="email" required placeholder="nama@del.ac.id">
-            </div>
-
-            <div class="field">
-              <label for="hp">No HP/WA:</label>
-              <input type="tel" id="hp" name="hp" required placeholder="081234567890">
-            </div>
-          </fieldset>
-
-          <!-- FIELDSET 2 -->
-          <fieldset>
-            <legend>Detail Pesan</legend>
-
-            <div class="field">
-              <label for="topik">Pilihan Topik:</label>
-              <select id="topik" name="topik" required>
-                <option value="">-- Pilih Topik --</option>
-                <option value="html">Tanya HTML5</option>
-                <option value="css">Tanya CSS3</option>
-                <option value="tugas">Diskusi Tugas</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="durasi">Jumlah Jam Diskusi:</label>
-              <input type="number" id="durasi" name="durasi" min="1" max="5" value="1" required>
-            </div>
-
-            <div class="field">
-              <label>Tempat Diskusi:</label>
-              <div>
-                <label for="online"><input type="radio" id="online" name="tempat" value="online" checked required> Online</label>
-                <label for="kampus"><input type="radio" id="kampus" name="tempat" value="kampus" required> Di Kampus</label>
+          <!-- 4+ Kartu Proyek dengan row-cols -->
+          <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+            
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <div class="bg-primary text-white p-4 text-center rounded-top">
+                  <i class="bi bi-window-stack display-4"></i>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="mb-2">
+                    <span class="badge bg-primary">Bootstrap 5</span>
+                    <span class="badge bg-secondary">HTML5</span>
+                  </div>
+                  <h5 class="card-title fw-bold">Portal Portofolio Web</h5>
+                  <p class="card-text text-muted small">Refactoring halaman portofolio mandiri dengan struktur semantik dan integrasi framework Bootstrap 5.3.</p>
+                  <button type="button" class="btn btn-outline-primary mt-auto fw-semibold" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                    Detail Proyek <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
               </div>
             </div>
 
-            <div class="field">
-              <label>Bantuan yang Dibutuhkan:</label>
-              <div>
-                <label for="bantu_html"><input type="checkbox" id="bantu_html" name="bantu[]" value="html"> Cek HTML</label>
-                <label for="bantu_css"><input type="checkbox" id="bantu_css" name="bantu[]" value="css"> Cek CSS</label>
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <div class="bg-success text-white p-4 text-center rounded-top">
+                  <i class="bi bi-database display-4"></i>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="mb-2">
+                    <span class="badge bg-success">MySQL</span>
+                    <span class="badge bg-secondary">JDBC</span>
+                  </div>
+                  <h5 class="card-title fw-bold">Sistem Manajemen Basis Data</h5>
+                  <p class="card-text text-muted small">Perancangan ERD, normalisasi relasi, dan implementasi kueri kompleks untuk sistem akademik.</p>
+                  <button type="button" class="btn btn-outline-success mt-auto fw-semibold" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                    Detail Proyek <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
               </div>
             </div>
 
-            <div class="field">
-              <label for="pesan">Isi Pesan:</label>
-              <textarea id="pesan" name="pesan" rows="4" required placeholder="Tuliskan pertanyaan kamu di sini..."></textarea>
+            <!-- Card 3 -->
+            <div class="col">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <div class="bg-warning text-dark p-4 text-center rounded-top">
+                  <i class="bi bi-cpu display-4"></i>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="mb-2">
+                    <span class="badge bg-dark">Java</span>
+                    <span class="badge bg-secondary">OOP</span>
+                  </div>
+                  <h5 class="card-title fw-bold">Algoritma &amp; Struktur Data</h5>
+                  <p class="card-text text-muted small">Implementasi struktur data fundamental seperti Linked List, Stack, Queue, dan Tree.</p>
+                  <button type="button" class="btn btn-outline-dark mt-auto fw-semibold" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                    Detail Proyek <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-          </fieldset>
 
-          <button type="submit">Kirim Pesan</button>
-          <button type="reset">Reset</button>
+            <!-- Card 4 -->
+            <div class="col">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <div class="bg-danger text-white p-4 text-center rounded-top">
+                  <i class="bi bi-shield-check display-4"></i>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="mb-2">
+                    <span class="badge bg-danger">Testing</span>
+                    <span class="badge bg-secondary">JUnit</span>
+                  </div>
+                  <h5 class="card-title fw-bold">Pengujian Aplikasi Web</h5>
+                  <p class="card-text text-muted small">Pengujian fungsionalitas menggunakan unit testing, test case matrix, dan evaluasi kualitas perangkat lunak.</p>
+                  <button type="button" class="btn btn-outline-danger mt-auto fw-semibold" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                    Detail Proyek <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        </form>
-      </section>
+          </div>
 
-    </main>
+          <!-- Tabel Riwayat Matakuliah -->
+          <div class="card shadow-sm border-0 p-3">
+            <h4 class="h5 fw-bold mb-3 text-secondary">Tabel Riwayat Mata Kuliah</h4>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <caption class="text-muted small">Tabel 1: Daftar Matakuliah Praktikum S1 Sistem Informasi</caption>
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Kode MK</th>
+                    <th scope="col">Nama Mata Kuliah</th>
+                    <th scope="col">SKS</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>IFS2102</td>
+                    <td>Pemrograman &amp; Pengujian Aplikasi Web</td>
+                    <td>4</td>
+                    <td><span class="badge bg-warning text-dark">Sedang Diambil</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>IFS2101</td>
+                    <td>Manajemen Basis Data</td>
+                    <td>3</td>
+                    <td><span class="badge bg-success">Lulus</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>IFS2002</td>
+                    <td>Algoritma dan Pemrograman</td>
+                    <td>4</td>
+                    <td><span class="badge bg-success">Lulus</span></td>
+                  </tr>
+                </tbody>
+                <tfoot class="table-group-divider fw-bold">
+                  <tr>
+                    <th scope="row" colspan="3">Total SKS</th>
+                    <td colspan="2">11 SKS</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
 
-    <!-- ASIDE / SIDEBAR -->
-    <aside>
-      <div class="kotak">
-        <h3>Info Kampus</h3>
-        <p>Institut Teknologi Del</p>
-        <p>Sitoluama, Laguboti, Toba</p>
+        <!-- SECTION 4: MODERNIISASI FORMULIR LAYANAN -->
+        <section id="layanan" class="mb-5">
+          <h2 class="h3 text-primary border-bottom pb-2 mb-3">Formulir Kontak &amp; Konsultasi</h2>
+          
+          <div class="card shadow-sm border-0 p-4">
+            <form action="#" method="post" class="needs-validation" novalidate>
+              
+              <fieldset class="border p-3 rounded mb-4">
+                <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary">Data Pengirim</legend>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Isi nama kamu" required>
+                  <label for="nama"><i class="bi bi-person me-1"></i> Nama Lengkap *</label>
+                  <div class="invalid-feedback">Nama lengkap wajib diisi.</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="nama@del.ac.id" required>
+                  <label for="email"><i class="bi bi-envelope me-1"></i> Email Kampus *</label>
+                  <div class="invalid-feedback">Alamat email valid (nama@del.ac.id) wajib disertakan.</div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                  <div class="form-floating flex-grow-1">
+                    <input type="tel" class="form-control" id="hp" name="hp" placeholder="081234567890" required>
+                    <label for="hp">No HP/WA *</label>
+                  </div>
+                  <div class="invalid-feedback">Nomor HP/WA wajib diisi.</div>
+                </div>
+              </fieldset>
+
+              <fieldset class="border p-3 rounded mb-4">
+                <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary">Detail Pesan</legend>
+
+                <div class="mb-3">
+                  <label for="topik" class="form-label fw-bold small">Pilihan Topik</label>
+                  <select class="form-select" id="topik" name="topik" required>
+                    <option value="">-- Pilih Topik Diskusi --</option>
+                    <option value="html">Tanya HTML5 &amp; Bootstrap</option>
+                    <option value="css">Tanya CSS Custom Properties</option>
+                    <option value="tugas">Diskusi Tugas Mandiri</option>
+                  </select>
+                  <div class="invalid-feedback">Silakan pilih topik diskusi.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="durasi" class="form-label fw-bold small">Jumlah Jam Diskusi (Jam)</label>
+                  <input type="number" class="form-control" id="durasi" name="durasi" min="1" max="5" value="1" required>
+                  <div class="invalid-feedback">Durasi minimal 1 jam, maksimal 5 jam.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold small">Tempat Diskusi</label>
+                  <div class="d-flex gap-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" id="online" name="tempat" value="online" checked required>
+                      <label class="form-check-label" for="online">Online (Zoom/Meet)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" id="kampus" name="tempat" value="kampus" required>
+                      <label class="form-check-label" for="kampus">Di Kampus IT Del</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold small">Bantuan yang Dibutuhkan</label>
+                  <div class="d-flex gap-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="bantu_html" name="bantu[]" value="html">
+                      <label class="form-check-label" for="bantu_html">Cek HTML &amp; Bootstrap</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="bantu_css" name="bantu[]" value="css">
+                      <label class="form-check-label" for="bantu_css">Cek CSS Overrides</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" id="pesan" name="pesan" style="height: 120px" placeholder="Tuliskan pertanyaan kamu di sini..." required></textarea>
+                  <label for="pesan"><i class="bi bi-chat-text me-1"></i> Isi Pesan &amp; Pertanyaan *</label>
+                  <div class="invalid-feedback">Isi pesan wajib diisi.</div>
+                </div>
+              </fieldset>
+
+              <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-warning text-dark fw-bold px-4 py-2 shadow-sm">Kirim Pesan</button>
+                <button type="reset" class="btn btn-secondary px-4 py-2">Reset</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ASIDE / SIDEBAR -->
+      <aside class="col-lg-4">
+        <div class="d-flex flex-column gap-4">
+          
+          <div class="card shadow-sm border-0 p-3 project-card">
+            <div class="card-body">
+              <h4 class="h5 fw-bold text-primary mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Info Kampus</h4>
+              <p class="card-text text-muted mb-1">Institut Teknologi Del</p>
+              <p class="card-text text-muted small">Sitoluama, Laguboti, Toba, Sumatera Utara</p>
+            </div>
+          </div>
+
+          <div class="card shadow-sm border-0 p-3 project-card">
+            <div class="card-body">
+              <h4 class="h5 fw-bold text-primary mb-2"><i class="bi bi-journal-code me-2"></i>Catatan Praktikum</h4>
+              <p class="card-text text-muted mb-1 fw-semibold">Minggu 03: Bootstrap 5 &amp; CSS Custom Properties</p>
+              <p class="card-text text-muted small">Refactoring total dari tampilan CSS murni ke ekosistem Bootstrap 5.3 dengan Custom Overrides.</p>
+            </div>
+          </div>
+
+          <div class="card shadow-sm border-0 p-3 project-card bg-light">
+            <div class="card-body">
+              <h4 class="h5 fw-bold text-dark mb-2"><i class="bi bi-link-45deg me-2"></i>Tautan Cepat</h4>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-1"><a href="#hero" class="text-decoration-none">Beranda Atas</a></li>
+                <li class="mb-1"><a href="#portofolio" class="text-decoration-none">Daftar Proyek</a></li>
+                <li><a href="#layanan" class="text-decoration-none">Formulir Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- BOOTSTRAP MODALS -->
+  <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fw-bold" id="projectModal1Label"><i class="bi bi-window-stack me-2"></i>Detail Proyek: Portal Portofolio Web</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Deskripsi Lengkap:</strong> Proyek ini merupakan implementasi halaman portofolio pribadi berbasis HTML5 semantik yang direfaktor menggunakan Bootstrap 5.3 CDN dan Custom CSS Variables.</p>
+          <p><strong>Teknologi Digunakan:</strong> HTML5, Bootstrap 5 Grid System, Flexbox, CSS Custom Properties, Responsive Navbars.</p>
+          <p class="text-muted mb-0"><small>Dikembangkan oleh Bastian Tambunan - S1 Sistem Informasi IT Del.</small></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div class="kotak">
-        <h3>Catatan Praktikum</h3>
-        <p>Minggu 02: HTML5 &amp; CSS3</p>
+  <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title fw-bold" id="projectModal2Label"><i class="bi bi-database me-2"></i>Detail Proyek: Manajemen Basis Data</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Deskripsi Lengkap:</strong> Proyek perancangan basis data relasional untuk sistem akademik IT Del. Mencakup Entity-Relationship Diagram (ERD), normalisasi 3NF, dan stored procedures.</p>
+          <p><strong>Teknologi Digunakan:</strong> MySQL, PostgreSQL, JDBC, Java, SQL Workbench.</p>
+          <p class="text-muted mb-0"><small>Dikembangkan untuk mata kuliah Manajemen Basis Data S1 Sistem Informasi.</small></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
       </div>
-    </aside>
-
+    </div>
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Bastian Tambunan - IT Del</p>
+  <footer class="text-white text-center py-4 mt-5" style="background-color: var(--primary-brand);">
+    <div class="container">
+      <p class="mb-1 fw-semibold">&copy; 2026 Bastian Tambunan - IT Del</p>
+      <p class="text-white-50 small mb-0">Praktikum Pemrograman dan Pengujian Aplikasi Web (PPAW) - Minggu 3</p>
+    </div>
   </footer>
 
+  <!-- Bootstrap 5.3.3 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzIVxh9N0fcP3nzBzA36blE+zt" crossorigin="anonymous"></script>
+  
+  <!-- Form Validation Script -->
+  <script>
+    (function () {
+      'use strict'
+      var forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
 </body>
 </html>

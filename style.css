@@ -1,231 +1,56 @@
-/* UNIVERSAL BOX SIZING RESET */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ==========================================
+   CUSTOM CSS PROPERTIES & THEMING (:root)
+   Minimal 6 variables required
+   ========================================== */
+:root {
+  --primary-brand: #003366;     /* IT Del Navy Blue */
+  --primary-hover: #002244;     /* Darker Navy */
+  --accent-color: #ff9900;      /* IT Del Orange / Gold */
+  --surface-bg: #ffffff;        /* Card / Surface Background */
+  --card-radius: 12px;          /* Border radius for cards */
+  --shadow-lift: 0 10px 20px -3px rgba(0, 0, 0, 0.08); /* Hover shadow */
+  --body-bg: #f8f9fa;           /* Light body background */
 }
 
-/* PALET WARNA (60-30-10): 
-   60% Latar belakang terang (#f0f0f0, #ffffff)
-   30% Warna utama IT Del (#003366)
-   10% Warna aksen (#ff9900)
-*/
+/* GLOBAL STYLES & RESET */
 body {
-  background-color: #f0f0f0;
-  color: #222222;
-  line-height: 1.5;
+  background-color: var(--body-bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #212529;
 }
 
-/* HEADER DAN NAVIGASI (FLEXBOX) */
-header {
-  background-color: #003366;
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* MICRO-INTERACTIONS & HOVER EFFECTS */
+.project-card {
+  background-color: var(--surface-bg);
+  border-radius: var(--card-radius);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-header .logo h1 {
-  font-size: 20px;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lift);
 }
 
-header .logo p {
-  font-size: 13px;
-  color: #dddddd;
+/* NAVBAR CUSTOM OVERRIDES */
+.navbar-brand {
+  letter-spacing: 0.5px;
 }
 
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 15px;
+/* BUTTON HOVER ENHANCEMENTS */
+.btn-warning {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transition: all 0.2s ease-in-out;
 }
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 8px;
+.btn-warning:hover {
+  background-color: #e68a00;
+  border-color: #e68a00;
+  transform: translateY(-1px);
 }
 
-header nav a:hover {
-  background-color: #ff9900;
-  border-radius: 3px;
-}
-
-/* LAYOUT GRID UTAMA (MAIN & ASIDE) */
-.layout {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 10px;
-  display: grid;
-  grid-template-columns: 1fr 250px;
-  gap: 20px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
+/* SECTION HEADINGS */
 section h2 {
-  color: #003366;
-  border-bottom: 2px solid #003366;
-  margin-bottom: 10px;
-  padding-bottom: 3px;
-}
-
-.kotak {
-  background-color: white;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.kotak h3 {
-  color: #003366;
-  margin-bottom: 8px;
-}
-
-.kotak ul, .kotak ol {
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-/* TABEL */
-.tabel-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  margin-top: 5px;
-}
-
-caption {
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 5px;
-  color: #003366;
-}
-
-th, td {
-  border: 1px solid #999;
-  padding: 8px;
-  text-align: left;
-}
-
-thead th {
-  background-color: #003366;
-  color: white;
-}
-
-tbody tr:hover {
-  background-color: #e6f0fa;
-}
-
-tfoot {
-  font-weight: bold;
-  background-color: #e0e0e0;
-}
-
-/* FORMULIR */
-form {
-  background-color: white;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-fieldset {
-  border: 1px solid #aaa;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-}
-
-legend {
-  font-weight: bold;
-  color: #003366;
-  padding: 0 5px;
-}
-
-.field {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.field label {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 3px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-select,
-textarea {
-  padding: 6px;
-  border: 1px solid #888;
-  border-radius: 3px;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #ff9900;
-  outline: none;
-}
-
-button {
-  padding: 8px 15px;
-  background-color: #ff9900;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button[type="reset"] {
-  background-color: #777;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* ASIDE SIDEBAR */
-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* FOOTER */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-/* MEDIA QUERY UNTUK RESPONSIVE */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .layout {
-    grid-template-columns: 1fr;
-  }
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
