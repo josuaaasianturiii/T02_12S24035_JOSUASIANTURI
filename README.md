@@ -1,7 +1,7 @@
 # Tugas Mandiri Minggu 03 - PPAW (Bootstrap 5 & Custom CSS)
 
-Nama: Bastian Tambunan  
-NIM: 12S22045  
+Nama: Josua Sianturi  
+NIM: 12S22035
 Prodi: S1 Sistem Informasi IT Del  
 
 ## Deskripsi Singkat
